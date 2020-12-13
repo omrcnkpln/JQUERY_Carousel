@@ -270,10 +270,12 @@ function progressBarLeft() {
     changeWritingLeft();
 
     currentProgress = currentProgress - progressAdd;
-    if(currentProgress < $("#progressBar").width()){
+
+    if(currentProgress < 0){
         currentProgress = $("#progressBar").width();
     }
-
+    alert(currentProgress);
+    
     $("#progressBar .progress-bar").animate({ width: currentProgress });
 }
 
