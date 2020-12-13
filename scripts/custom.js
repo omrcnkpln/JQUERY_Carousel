@@ -274,7 +274,6 @@ function progressBarLeft() {
     if(currentProgress < 0){
         currentProgress = $("#progressBar").width();
     }
-    alert(currentProgress);
     
     $("#progressBar .progress-bar").animate({ width: currentProgress });
 }
