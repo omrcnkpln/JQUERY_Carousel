@@ -2,7 +2,7 @@
 var imageWrapper = $('#images-action');
 var writingWrapper = $('#writing-action');
 var itemNumber = imageWrapper.find(".img-box-1").find(".img").length;
-var progressAdd = $("#progressBar").width() / (itemNumber-1);
+var progressAdd = $("#progressBar").width() / (itemNumber - 1);
 var currentProgress = 0;
 
 $(function () {
@@ -34,11 +34,6 @@ $(function () {
         $("#stop").addClass("show").siblings().removeClass("show");
     });
 
-    // setTimeout(() => {
-    //     $("#time-bar").addClass("time-bar-ani");
-    //     changeImages();
-    // }, 1000);
-
     var timer = function () {
         interval = setInterval(function () {
             changeImagesRight();
@@ -62,8 +57,6 @@ var d;
 var e;
 var f;
 function changeImagesRight() {
-    progressBarRight();
-
     imageItems1 = imageWrapper.find(".img-box-1").find(".img");
     imageItems1.each(function () {
         if ($(this).hasClass("show")) {
@@ -73,6 +66,7 @@ function changeImagesRight() {
             }
         }
     });
+
     imageItems1.eq(c - 1).addClass("remove").siblings().removeClass("remove");
     imageItems1.eq(c).addClass("show").siblings().removeClass("show");
 
@@ -111,11 +105,11 @@ function changeImagesRight() {
     });
     imageItems4.eq(f - 1).addClass("remove").siblings().removeClass("remove");
     imageItems4.eq(f).addClass("show").siblings().removeClass("show");
-}
+
+    progressBarRight();
+};
 
 function changeImagesLeft() {
-    progressBarLeft();
-
     imageItems1 = imageWrapper.find(".img-box-1").find(".img");
     imageItems1.each(function () {
         if ($(this).hasClass("show")) {
@@ -167,116 +161,72 @@ function changeImagesLeft() {
     if (f == -1) {
         f = imageItems4.length;
     }
-}
+
+    progressBarLeft();
+};
 
 // <!-- _____________________________ progress-bar hareketi _____________________________________________________________ -->
-var i = 0;
 function progressBarRight() {
     changeWritingRight();
 
+    var w = $(window).width();
+
+    progressAdd = $("#progressBar").width() / (itemNumber - 1);
     currentProgress = currentProgress + progressAdd;
-    if(currentProgress > $("#progressBar").width()){
+    
+    
+    if (currentProgress-10 > $("#progressBar").width()) {
         currentProgress = 0;
     }
-
+    
     $("#progressBar .progress-bar").animate({ width: currentProgress });
 
-    // var w = $(window).width();
-    // if (i == 0) {
-    //     $("#progressBar").addClass("progress-2");
-
-    //     $(".count").removeClass("animate__fadeInRight animate__fadeInUp");
-
-    //     if (w >= 576) {
-    //         setTimeout(() => {
-    //             $(".count").addClass("animate__fadeInRight");
-    //             $("#count").text("02");
-    //         }, 1000);
-    //     } else {
-    //         setTimeout(() => {
-    //             $(".count").addClass("animate__fadeInUp");
-    //             $("#count").text("02");
-    //         }, 1000);
-    //     }
-    // }
-    // else if (i == 1) {
-    //     $("#progressBar").addClass("progress-3").removeClass("progress-2");
-
-    //     $(".count").removeClass("animate__fadeInRight animate__fadeInUp");
-
-    //     if (w >= 576) {
-    //         setTimeout(() => {
-    //             $(".count").addClass("animate__fadeInRight");
-    //             $("#count").text("03");
-    //         }, 1000);
-    //     } else {
-    //         setTimeout(() => {
-    //             $(".count").addClass("animate__fadeInUp");
-    //             $("#count").text("03");
-    //         }, 1000);
-    //     }
-    // } else if (i == 2) {
-    //     $("#progressBar").addClass("progress-4").removeClass("progress-3");
-
-    //     $(".count").removeClass("animate__fadeInRight animate__fadeInUp");
-
-    //     if (w >= 576) {
-    //         setTimeout(() => {
-    //             $(".count").addClass("animate__fadeInRight");
-    //             $("#count").text("04");
-    //         }, 1000);
-    //     } else {
-    //         setTimeout(() => {
-    //             $(".count").addClass("animate__fadeInUp");
-    //             $("#count").text("04");
-    //         }, 1000);
-    //     }
-    // } else if (i == 3) {
-    //     $("#progressBar").addClass("progress-5").removeClass("progress-4");
-
-    //     $(".count").removeClass("animate__fadeInRight animate__fadeInUp");
-
-    //     if (w >= 576) {
-    //         setTimeout(() => {
-    //             $(".count").addClass("animate__fadeInRight");
-    //             $("#count").text("05");
-    //         }, 1000);
-    //     } else {
-    //         setTimeout(() => {
-    //             $(".count").addClass("animate__fadeInUp");
-    //             $("#count").text("05");
-    //         }, 1000);
-    //     }
-    // } else if (i == 4) {
-    //     $("#progressBar").removeClass().addClass("progress-bar animate__animated progress-1");
-
-    //     $(".count").removeClass("animate__fadeInRight animate__fadeInUp");
-
-    //     if (w >= 576) {
-    //         setTimeout(() => {
-    //             $(".count").addClass("animate__fadeInRight");
-    //             $("#count").text("01");
-    //         }, 1000);
-    //     } else {
-    //         setTimeout(() => {
-    //             $(".count").addClass("animate__fadeInUp");
-    //             $("#count").text("01");
-    //         }, 1000);
-    //     }
-    // }
+    $(".count").removeClass("animate__fadeInRight animate__fadeInUp");
+    if (w >= 576) {
+        setTimeout(() => {
+            $(".count").addClass("animate__fadeInRight");
+            $("#count").text('0' + (c + 1));
+        }, 1000);
+    } else {
+        setTimeout(() => {
+            $(".count").addClass("animate__fadeInUp");
+            $("#count").text('0' + (c + 1));
+        }, 1000);
+    }
 };
 
 function progressBarLeft() {
     changeWritingLeft();
 
+    var w = $(window).width();
+
+    progressAdd = $("#progressBar").width() / (itemNumber - 1);
     currentProgress = currentProgress - progressAdd;
 
-    if(currentProgress < 0){
+
+    if (currentProgress < -10) {
         currentProgress = $("#progressBar").width();
     }
-    
+
     $("#progressBar .progress-bar").animate({ width: currentProgress });
-}
+
+    $(".count").removeClass("animate__fadeInRight animate__fadeInUp");
+    if (w >= 576) {
+        setTimeout(() => {
+            $(".count").addClass("animate__fadeInRight");
+            if (c == itemNumber) {
+                $("#count").text('0' + itemNumber);
+            } else {
+                $("#count").text('0' + (c + 1));
+            }
+        }, 1000);
+    } else {
+        setTimeout(() => {
+            $(".count").addClass("animate__fadeInUp");
+            $("#count").text('0' + (c + 1));
+        }, 1000);
+    }
+};
 
 // <!-- _____________________________ yazıların hareketi _____________________________________________________________ -->
 var g;

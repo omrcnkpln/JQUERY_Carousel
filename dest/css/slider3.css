@@ -44,41 +44,41 @@ header {
 @-webkit-keyframes time-bar-ani {
   0% {
     width: 0%; }
-  75% {
-    left: 0; }
+  70% {
+    left: 0;
+    width: 100%; }
   to {
-    left: 100%;
-    width: 100%; } }
+    left: 100%; } }
 
 @-moz-keyframes time-bar-ani {
   0% {
     width: 0%; }
-  75% {
-    left: 0; }
+  70% {
+    left: 0;
+    width: 100%; }
   to {
-    left: 100%;
-    width: 100%; } }
+    left: 100%; } }
 
 @-o-keyframes time-bar-ani {
   0% {
     width: 0%; }
-  75% {
-    left: 0; }
+  70% {
+    left: 0;
+    width: 100%; }
   to {
-    left: 100%;
-    width: 100%; } }
+    left: 100%; } }
 
 @keyframes time-bar-ani {
   0% {
     width: 0%; }
-  75% {
-    left: 0; }
+  70% {
+    left: 0;
+    width: 100%; }
   to {
-    left: 100%;
-    width: 100%; } }
+    left: 100%; } }
 
 header.bg-1 {
-  background-color: #809BA4; }
+  background-color: #0C1229; }
 
 header.bg-2 {
   background-color: #594D4C; }
@@ -406,231 +406,3 @@ footer {
        -moz-transform: scaleX(3) translate(-20vw);
          -o-transform: scaleX(3) translate(-20vw);
             transform: scaleX(3) translate(-20vw); } }
-
-@-webkit-keyframes progress-1 {
-  0% {
-    width: 0; }
-  to {
-    width: 17%; } }
-
-@-moz-keyframes progress-1 {
-  0% {
-    width: 0; }
-  to {
-    width: 17%; } }
-
-@-o-keyframes progress-1 {
-  0% {
-    width: 0; }
-  to {
-    width: 17%; } }
-
-@keyframes progress-1 {
-  0% {
-    width: 0; }
-  to {
-    width: 17%; } }
-
-.progress-1 {
-  -webkit-animation-name: progress-1;
-  -moz-animation-name: progress-1;
-    -o-animation-name: progress-1;
-       animation-name: progress-1;
-  -webkit-animation-duration: 1s;
-     -moz-animation-duration: 1s;
-       -o-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 333ms;
-     -moz-animation-delay: 333ms;
-       -o-animation-delay: 333ms;
-          animation-delay: 333ms; }
-
-@-webkit-keyframes progress-2 {
-  0% {
-    width: 17%; }
-  to {
-    width: 34%; } }
-
-@-moz-keyframes progress-2 {
-  0% {
-    width: 17%; }
-  to {
-    width: 34%; } }
-
-@-o-keyframes progress-2 {
-  0% {
-    width: 17%; }
-  to {
-    width: 34%; } }
-
-@keyframes progress-2 {
-  0% {
-    width: 17%; }
-  to {
-    width: 34%; } }
-
-.progress-2 {
-  -webkit-animation-name: progress-2;
-  -moz-animation-name: progress-2;
-    -o-animation-name: progress-2;
-       animation-name: progress-2;
-  -webkit-animation-duration: 1s;
-     -moz-animation-duration: 1s;
-       -o-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 333ms;
-     -moz-animation-delay: 333ms;
-       -o-animation-delay: 333ms;
-          animation-delay: 333ms; }
-
-@-webkit-keyframes proggress-3 {
-  0% {
-    width: 34%; }
-  to {
-    width: 51%; } }
-
-@-moz-keyframes proggress-3 {
-  0% {
-    width: 34%; }
-  to {
-    width: 51%; } }
-
-@-o-keyframes proggress-3 {
-  0% {
-    width: 34%; }
-  to {
-    width: 51%; } }
-
-@keyframes proggress-3 {
-  0% {
-    width: 34%; }
-  to {
-    width: 51%; } }
-
-.progress-3 {
-  -webkit-animation-name: proggress-3;
-  -moz-animation-name: proggress-3;
-    -o-animation-name: proggress-3;
-       animation-name: proggress-3;
-  -webkit-animation-duration: 1s;
-     -moz-animation-duration: 1s;
-       -o-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 333ms;
-     -moz-animation-delay: 333ms;
-       -o-animation-delay: 333ms;
-          animation-delay: 333ms; }
-
-@-webkit-keyframes proggress-4 {
-  0% {
-    width: 51%; }
-  to {
-    width: 67%; } }
-
-@-moz-keyframes proggress-4 {
-  0% {
-    width: 51%; }
-  to {
-    width: 67%; } }
-
-@-o-keyframes proggress-4 {
-  0% {
-    width: 51%; }
-  to {
-    width: 67%; } }
-
-@keyframes proggress-4 {
-  0% {
-    width: 51%; }
-  to {
-    width: 67%; } }
-
-.progress-4 {
-  -webkit-animation-name: proggress-4;
-  -moz-animation-name: proggress-4;
-    -o-animation-name: proggress-4;
-       animation-name: proggress-4;
-  -webkit-animation-duration: 1s;
-     -moz-animation-duration: 1s;
-       -o-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 333ms;
-     -moz-animation-delay: 333ms;
-       -o-animation-delay: 333ms;
-          animation-delay: 333ms; }
-
-@-webkit-keyframes proggress-5 {
-  0% {
-    width: 67%; }
-  to {
-    width: 84%; } }
-
-@-moz-keyframes proggress-5 {
-  0% {
-    width: 67%; }
-  to {
-    width: 84%; } }
-
-@-o-keyframes proggress-5 {
-  0% {
-    width: 67%; }
-  to {
-    width: 84%; } }
-
-@keyframes proggress-5 {
-  0% {
-    width: 67%; }
-  to {
-    width: 84%; } }
-
-.progress-5 {
-  -webkit-animation-name: proggress-5;
-  -moz-animation-name: proggress-5;
-    -o-animation-name: proggress-5;
-       animation-name: proggress-5;
-  -webkit-animation-duration: 1s;
-     -moz-animation-duration: 1s;
-       -o-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 333ms;
-     -moz-animation-delay: 333ms;
-       -o-animation-delay: 333ms;
-          animation-delay: 333ms; }
-
-@-webkit-keyframes proggress-6 {
-  0% {
-    width: 84%; }
-  to {
-    width: 100%; } }
-
-@-moz-keyframes proggress-6 {
-  0% {
-    width: 84%; }
-  to {
-    width: 100%; } }
-
-@-o-keyframes proggress-6 {
-  0% {
-    width: 84%; }
-  to {
-    width: 100%; } }
-
-@keyframes proggress-6 {
-  0% {
-    width: 84%; }
-  to {
-    width: 100%; } }
-
-.progress-6 {
-  -webkit-animation-name: proggress-6;
-  -moz-animation-name: proggress-6;
-    -o-animation-name: proggress-6;
-       animation-name: proggress-6;
-  -webkit-animation-duration: 1s;
-     -moz-animation-duration: 1s;
-       -o-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 333ms;
-     -moz-animation-delay: 333ms;
-       -o-animation-delay: 333ms;
-          animation-delay: 333ms; }
